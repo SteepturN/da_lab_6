@@ -13,4 +13,4 @@ if __name__ == "__main__":
         sys.exit(1)
     test_file_name = "0"
     with open( "{0}".format( sys.argv[ 1 ] ), 'w' ) as output_file:
-        output_file.write("{0} {1}\n".format( random.randint(1, 10 ** 9), random.randint(1, 10 ** 5) ) )
+        output_file.write("{0} {1}\n".format( random.randint(1, 10 ** 18), random.randint(1, 10 ** 5) ) )
