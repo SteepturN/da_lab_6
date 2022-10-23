@@ -29,12 +29,11 @@ int main() {
         n = num[ i ] - '0' + n * 10;
         // unsigned prev_count = count;//
 
-        if( cur < n ) {
-            if( i == num.size() - 1 ) {
-                count += ( n - cur - 1 ) / m + 1;
-            } else {
-                count += ( n - cur ) / m + 1;
-            }
+        if( ( i < num.size() - 1 ) && ( cur <= n ) ) {
+            count += ( n - cur ) / m + 1;
+        } else if( ( i == num.size() - 1 ) && ( cur < n ) ) {
+            count += ( n - cur - 1 ) / m + 1;
+            break;
         }
 
         if( ten_pow > cur ) {
